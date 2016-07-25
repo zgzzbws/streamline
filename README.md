@@ -5,5 +5,4 @@ In this program, the seeding points were randomly generated within the specific 
 
 When generating the lines, we do not terminate the computation even when it is getting really close to another streamline. Thus, short line segments could be avoided, because short streamlines may not be classified into the same group with nearby long streamlines.
 
-sample picture:
 ![image](https://github.com/zgzzbws/streamline/blob/master/screenshots/streamline.png)
