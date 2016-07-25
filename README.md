@@ -1,4 +1,4 @@
-# streamline
+# STREAMLINE
 Destination: To Generate Streamlines Of The Given Vector Data
 
 In this program, the seeding points were randomly generated within the specific area, and thus streamlines were traced out from each seed using an adaptive Runge-Kutta fourth order (RK45) integrator in both forward and backward direction. 
