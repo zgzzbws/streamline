@@ -13,7 +13,7 @@ void VectorField2D::clear()
 
 bool VectorField2D::readFile( const char* fileName )
 {
-	ifstream file(fileName);
+	std::ifstream file(fileName);
 	if (!file)
 		return false;
 
@@ -22,14 +22,14 @@ bool VectorField2D::readFile( const char* fileName )
 	int ithRow = 0;
 	while (true)
 	{
-		string line;
+		std::string line;
 		file >> line;
 		if (!file)
 		{
 			break;
 		}
 
-		stringstream ss;
+		std::stringstream ss;
 		ss << line;
 
 		int ithCol = 0;
@@ -62,7 +62,7 @@ bool VectorField2D::readFile( const char* fileName )
 
 bool VectorField2D::writeFile( const char* fileName )
 {
-	ofstream file(fileName);
+	std::ofstream file(fileName);
 	if (!file)
 		return false;
 
@@ -72,9 +72,8 @@ bool VectorField2D::writeFile( const char* fileName )
 		{
 			Vector2& v = m_data[i];
 			file << v.x << ',' << v.y << ',';
-
 		}
-		file << endl;
+		file << std::endl;
 	}
 	file.close();
 	return true;
@@ -170,9 +169,9 @@ bool VectorField2D::getValue( const Vector2& pnt , Vector2& dir)const
 	return true;
 }
 
-const vector<RGB> VectorField2D::getImage() const
+const std::vector<RGB> VectorField2D::getImage() const
 {
-    vector<RGB> image;
+    std::vector<RGB> image;
 	if (m_nCols <= 0 || m_nRows <= 0)
 	{
 		return image;
@@ -198,7 +197,7 @@ const vector<RGB> VectorField2D::getImage() const
 	return image;
 }
 
-bool VectorField2D::getLengthField( vector<double>& field ) const
+bool VectorField2D::getLengthField( std::vector<double>& field ) const
 {
 	if (m_nRows <= 0 || m_nCols <= 0)
 		return false;
