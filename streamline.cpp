@@ -14,12 +14,12 @@ double Line::getLength() const
 void StreamLineParam::print() const
 {
     printf("alpha:%lf\n", alpha);
-	printf("dMin :%lf\n", dMin);
-	printf("dSep :%lf\n", dSep);
-	printf("dSelfSep:%lf\n", dSelfsep);
-	printf("w    :%lf\n", w);
-	printf("minLen:%lf\n", minLen);
-	printf("maxLen:%lf\n", maxLen);
-	printf("nHalfSample:%d\n", nHalfSample);
-	printf("maxSize:%d\n", maxSize);
+    printf("dMin :%lf\n", dMin);
+	  printf("dSep :%lf\n", dSep);
+  	printf("dSelfSep:%lf\n", dSelfsep);
+	  printf("w    :%lf\n", w);
+	  printf("minLen:%lf\n", minLen);
+	  printf("maxLen:%lf\n", maxLen);
+	  printf("nHalfSample:%d\n", nHalfSample);
+	  printf("maxSize:%d\n", maxSize);
 }
