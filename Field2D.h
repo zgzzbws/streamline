@@ -8,8 +8,6 @@
 #include <float.h>
 #include "Vector2.h"
 
-using namespace std;
-
 struct RGB {
     int red;
     int green;
@@ -36,9 +34,9 @@ public:
     bool     setToCircular( int nRows, int nCols );
 
     bool     getValue( const Vector2& pnt, Vector2& dir ) const;
-    bool     getLengthField( vector<double>& field )const;
+    bool     getLengthField( std::vector<double>& field )const;
 
-    const vector<RGB> getImage()const;
+    const std::vector<RGB> getImage()const;
 
     Vector2& getCell( int row, int col ) {
         return m_data[row*m_nCols+col];
@@ -67,7 +65,7 @@ private:
     //set the rectangle area
     int              m_nRows;
     int              m_nCols;
-    vector<Vector2>  m_data;
+    std::vector<Vector2>  m_data;
     //compute the bound
     void computeBound();
 };
